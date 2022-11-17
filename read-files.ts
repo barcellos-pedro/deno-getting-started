@@ -1,4 +1,4 @@
-import { copy } from "https://deno.land/std@0.163.0/streams/conversion.ts";
+// import { copy } from "https://deno.land/std@0.163.0/streams/conversion.ts";
 // copy() is a utility function that copies from a Reader to a Writer.
 // useful for converting between different types of streams.
 

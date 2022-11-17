@@ -1,8 +1,9 @@
+// deno-lint-ignore-file no-explicit-any
 import express from "npm:express";
 
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/", (_req: any, res: any) => {
   res.send("Hello World!");
 });
 
