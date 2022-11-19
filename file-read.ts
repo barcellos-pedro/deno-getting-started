@@ -5,7 +5,7 @@ serve(async (_request: Request): Promise<Response> => {
 
   return new Response(content, {
     headers: {
-      "content-type": "text/plain",
+      "Content-type": "text/plain",
     },
   });
 });

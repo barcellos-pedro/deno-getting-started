@@ -11,8 +11,8 @@ serve(async (_request: Request): Promise<Response> => {
 
   return new Response(fileStream, {
     headers: {
-      "content-type": "video/mp4",
-      "content-length": String(fileInfo.size),
+      "Content-type": "video/mp4",
+      "Content-length": String(fileInfo.size),
     },
   });
 });

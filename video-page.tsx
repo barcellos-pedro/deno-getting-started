@@ -38,14 +38,14 @@ const handler = async (request: Request) => {
     const video = await Deno.readFile("./assets/video.mp4");
     return new Response(video, {
       headers: {
-        contentType: "video/mp4",
+        "Content-type": "video/mp4",
       },
     });
   }
 
   return new Response(renderSSR(<App />), {
     headers: {
-      "content-type": "text/html; charset=utf-8",
+      "Content-type": "text/html; charset=utf-8",
     },
   });
 };
