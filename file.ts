@@ -5,19 +5,21 @@ const fileInfo = await file.stat();
 
 if (fileInfo.isFile) {
   const fileSize = fileInfo.size;
-  console.log(fileSize);
+  console.log("fileSize in bytes: ", fileSize);
 
   const buf = new Uint8Array(fileSize);
-  console.log(buf);
+  // or Using ArrayBuffer
+  // const buf = new Uint8Array(new ArrayBuffer(fileSize));
+  console.log("buffer to read file\n", buf);
 
   const bytesRead = await file.read(buf); // n bytes
-  console.log(bytesRead);
+  console.log("bytesRead: ", bytesRead);
 
   const text = new TextDecoder().decode(buf); // "hello world"
-  console.log(text);
+  console.log("text\n", text);
 
   // buffer will be modified with file content
-  console.log(buf);
+  console.log("buffer with content\n", buf);
 }
 
 file.close();

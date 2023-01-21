@@ -26,12 +26,13 @@ const writable = new WritableStream({
 });
 
 // stream log 1
-readable.pipeTo(writable);
+// readable.pipeTo(writable);
 
 // stream log 2
 // log what comes from console input
 Deno.stdin.readable.pipeThrough(Uint8ArrayToString).pipeTo(writable);
 
+// stream log 3
 // gets console input stream and write on txt file
-const file = await Deno.open("message.txt", { create: true, write: true });
-Deno.stdin.readable.pipeTo(file.writable);
+// const file = await Deno.open("message.txt", { create: true, write: true });
+// Deno.stdin.readable.pipeTo(file.writable);
